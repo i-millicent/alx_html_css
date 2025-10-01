@@ -1,0 +1,163 @@
+
+body {
+    font-family: Arial, sans-serif; /* Example font, adjust as needed */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light background for the overall page */
+    color: #333;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff; /* White background for the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header .nav-links a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.header .nav-links a:hover {
+    color: #8e44ad; /* Example hover color, adjust as needed */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Important for containing the background image */
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Object.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); /* Darken the image for better text readability */
+    z-index: -1;
+}
+
+.hero-section h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-section .smile-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-section .smile-options button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-section .smile-options button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-section .register-button {
+    background-color: #8e44ad; /* Example button color, adjust as needed */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none; /* If it's an anchor tag */
+}
+
+.hero-section .register-button:hover {
+    background-color: #9b59b6; /* Lighter shade on hover */
+}
+
+.hero-section .learn-pros {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+/* Instructors/Featured Smiles Section */
+.instructors-section {
+    background-color: #333; /* Dark background for this section */
+    color: white;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 30px;
+}
+
+.instructor-card {
+    text-align: center;
+    width: 200px; /* Adjust card width as needed */
+}
+
+.instructor-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes images circular */
+    object-fit: cover; /* Ensures images fill the circle without distortion */
+    border: 3px solid #8e44ad; /* Border around circular images */
+    margin-bottom: 10px;
+}
+
+.instructor-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+.instructor-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Basic Responsiveness (add more media queries for finer control) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .header .nav-links {
+        margin-top: 15px;
+    }
+    .hero-section h1 {
+        font-size: 40px;
+    }
+    .hero-section .smile-options {
+        flex-direction: column;
+    }
+    .instructor-card {
+        width: 100%; /* Full width on small screens */
+    }
+}
